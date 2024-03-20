@@ -4,6 +4,12 @@ import TweetService from './services/tweet-service.js';
 
 const app = express();
 
+import apiRoutes from './routes/index.js'
+import bodyParser from 'body-parser';
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use('/api',apiRoutes);
+
 
 
 
