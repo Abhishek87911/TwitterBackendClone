@@ -18,10 +18,11 @@ app.listen(3000, async () => {
    
      const tweetRepo = new TweetRepository();
 
-     const tweet = await tweetRepo.getAll(2,4);
+    //  const tweet = await tweetRepo.getAll(2,4);
+    //  console.log(tweet[3].contentWithEmail);
+     const tweet = await tweetRepo.create({content: 'With hooks'});
+     console.log(tweet);
      
-     
-     console.log(tweet[3].contentWithEmail);
     
 
 })
