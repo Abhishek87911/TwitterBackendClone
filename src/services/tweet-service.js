@@ -37,12 +37,12 @@ class TweetService {
     })
     return tweet;
     
-    // to do create hashTag and add here
-    /*
-     1. bulkcreate in mongoose
-     2. filter title of hashtag based on multiple tags(we will use indexes)
-     3. how to add tweet id inside all the hashtag
-     */
+    
+   }
+   async get(tweetId){
+     const tweet = await this.tweetRepository.getWithComments(tweetId);
+     console.log(tweet);
+     return tweet;
    }
 }
 
