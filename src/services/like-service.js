@@ -26,7 +26,7 @@ class LikeService {
             onModel: modelType,
             likeable: modelId
         });
-        console.log(likeable);
+        
         if(exists){
             likeable.likes.pull(exists.id);
             await likeable.save();
@@ -39,7 +39,7 @@ class LikeService {
                 onModel: modelType,
                 likeable: modelId
             });
-            console.log(newLike);
+            
             likeable.likes.push(newLike);
             await likeable.save();
             var isAdded = true;
