@@ -6,7 +6,7 @@ const likeSchema = new mongoose.Schema({
     required: true,
     enum: ['Tweet','Comment'] 
    },
-   likeale: {
+   likeable: {
       type: mongoose.Schema.Types.ObjectId,
       refPath: 'onModel'
    },
