@@ -10,7 +10,7 @@ router.post('/tweets', authenticate, createTweet);
 router.get('/tweet/:id', getTweet);
 
 router.post('/likes/toggle', toggleLike);
-router.post('/comments', createComment);
+router.post('/comments',authenticate, createComment);
 
 router.post('/signup', signup);
 
